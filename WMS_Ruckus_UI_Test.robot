@@ -157,7 +157,7 @@ Test Users page
     Sleep	5s
     Mouse Over    partial link = ${mainmenu}
     Mouse Over    partial link = ${text}
-    Click Element   xpath=//*[@ui-sref='groups']
+    Click Element    xpath=//*[@ui-sref='groups']
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
