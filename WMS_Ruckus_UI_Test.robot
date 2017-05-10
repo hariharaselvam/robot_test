@@ -30,30 +30,31 @@ Test Dashboard
     Page Should Contain    Access Points
     Page Should Contain    Controllers
     Page Should Contain    Events
-
-
+    Click home button
 
 Test Admin page
-   Test Users page		 Administration	   Users   Accounts
-   Test List pages		 Administration	 Tenants   tenants	 Tenants
-   Test List page		 Administration	 Controller Authorization	controllerauthorization	Controller Authorization
-   Test Datamanagement page      Administration  Data Management   Agent Management
-   Test wmscluster page   	 Administration  WMS Cluster    Node Management
-   Test List page		 Administration	 Smartzone Releases   releases	 Smartzone Releases
 
+   Test Users page		 Administration	     Users      Accounts
+   Test List pages		 Administration	    Tenants    tenants    Tenants
+   Test List page		 Administration	   Controller Authorization	  controllerauthorization	Controller Authorization
+   Test Datamanagement page      Administration    Data Management   Agent Management
+   Test wmscluster page   	 Administration    WMS Cluster       Node Management
+   Test List page		 Administration	   Smartzone Releases      releases	  Smartzone Releases
 
 
 Test Manage pages
-    Test List page	Manage	 Dashboards	  manage	 Dashboards
-    Test List page	Manage	 Clusters	  clusters	 Clusters
-    Test List page	Manage	 Zones	          zone	         Zones
-    Test List paging	Manage	 Controllers	  controller	 Controllers
-    Test List access	Manage	 Access Points	  accesspoints	 Access Points
-    Test List page	Manage	 Client Devices	   uedevices	 Client Devices
-    Test List client	Manage	 Client Sessions   uesessions	 Client Sessions
+
+    Test List pageDB	Manage	  Dashboards  	   manage	  Dashboards
+    Test List pageCLS	Manage	  Clusters	 clusters	 Clusters
+    Test List pageZN	Manage	  Zones	           zone	          Zones
+    Test List paging	Manage	 Controllers	     controller	  Controllers
+    Test List access	Manage	 Access Points	    accesspoints	  Access Points
+    Test List page	    Manage	 Client Devices	    uedevices      Client Devices
+    Test List client	Manage	 Client Sessions    uesessions	  Client Sessions
 
 Test Report pages
-    Test List page	Reporting    Alarms	alarms	 Alarms
+
+    Test List page	        Reporting      Alarms	 alarms	   Alarms
     Test List eventgraph    Reporting    Events	  events   Events
 
 
@@ -164,6 +165,16 @@ Test Users page
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
     Sleep	2s
+    Click Element    xpath=//span[contains(text(),"Test Group")]
+    Sleep	5s
+    Click Element    link = Permissions
+    Sleep	3s
+    Click Element    xpath=//li[@class="active"]/a
+    Sleep	2s
+    Click Element    xpath=//span[contains(text(),"Another Group")]
+    Sleep	5s
+    Click Element    link = Permissions
+    Sleep	2s
 
 
 Test List pages
@@ -238,6 +249,22 @@ Test Wmscluster page
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
     Sleep	2s
+    Click Element    xpath=//span[contains(text(),"wmsapi")]
+    Sleep	5s
+    Click Element    link = Thresholds
+    Sleep	2s
+    Click Element    link = Networks
+    Sleep	2s
+    Click Element    link = Memory
+    Sleep	2s
+    Click Element    link = Alarms
+    Sleep	2s
+    Click Element    link = Data Management
+    Sleep	2s
+    Click Element    link = Disk
+    Sleep	2s
+    Click Element    link = CPU
+    Sleep	3s
     Mouse Over    partial link = ${mainmenu}
     Mouse Over    partial link = ${text}
     Click Element   xpath=//*[@ui-sref='settings']
@@ -247,6 +274,199 @@ Test Wmscluster page
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
     Sleep	2s
+
+
+Test List pageDB
+    [Arguments]	 ${mainmenu}	${submenu}    ${link}	${text}
+    Mouse Over    partial link = ${mainmenu}
+    Click Element    link = ${submenu}
+    Sleep	3s
+    Page Should Contain    ${text}
+    Click Element   xpath=//div[@class='box-header with-border']/span/input
+    Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
+    Sleep	2s
+    Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
+    Sleep	2s
+    Click Element    xpath=//span[contains(text(),"Controller Graphs")]
+    Sleep	5s
+    Page Should Contain      Dashboard Information
+    Page Should Contain      Controllers State
+    Page Should Contain      Controller State
+    Page Should Contain      anomaly
+    Click Element    xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
+    Sleep       2s
+    Click Element    xpath=//span[contains(text(),"list pages")]
+    Sleep	5s
+    Page Should Contain      Dashboard Information
+    Page Should Contain      Clusters
+    Page Should Contain      Zones
+    Page Should Contain      Controllers
+    Page Should Contain      Client Sessions
+    Page Should Contain      Client Devices
+    Click Element    xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
+    Sleep       2s
+
+
+
+Test List pageCLS
+    [Arguments]	 ${mainmenu}   ${submenu}    ${link}	${text}
+    Mouse Over    partial link = ${mainmenu}
+    Click Element    link = ${submenu}
+    Sleep	3s
+    Page Should Contain    ${text}
+    Click Element   xpath=//div[@class='box-header with-border']/span/input
+    Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
+    Sleep	2s
+    Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
+    Sleep	2s
+    Click Element    xpath=//table/tbody/tr[3]/td[2]/a/span/span
+    Sleep	5s
+    Page Should Contain      Cluster Information
+    Page Should Contain      Timeline
+    Page Should Contain      Distribution
+    Click Element    link = Thresholds
+    Sleep      3s
+    Click Element    link = Network
+    Sleep      3s
+    Click Element    link = Zones
+    Sleep      3s
+    Click Element    link = Access Points
+    Sleep      3s
+    Click Element    link = Alarms
+    Sleep      3s
+    Click Element    link = Data Management
+    Sleep      3s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Events
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Client Sessions
+    Sleep        4s
+    Click Element     xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
+    Sleep        2s
+
+    Click Element    xpath=//table/tbody/tr[4]/td[2]/a/span
+    Sleep	3s
+    Click Element    link = Thresholds
+    Sleep      3s
+    Click Element    link = Network
+    Sleep      3s
+    Click Element    link = Zones
+    Sleep      3s
+    Click Element    link = Access Points
+    Sleep      3s
+    Click Element    link = Alarms
+    Sleep      3s
+    Click Element    link = Data Management
+    Sleep      3s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Events
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Client Sessions
+    Sleep        4s
+    Click Element     xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
+    Sleep        2s
+
+    Click Element    xpath=//table/tbody/tr[5]/td[2]/a/span
+    Sleep	3s
+    Click Element    link = Thresholds
+    Sleep      3s
+    Click Element    link = Network
+    Sleep      3s
+    Click Element    link = Zones
+    Sleep      3s
+    Click Element    link = Access Points
+    Sleep      3s
+    Click Element    link = Alarms
+    Sleep      3s
+    Click Element    link = Data Management
+    Sleep      3s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Events
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Client Sessions
+    Sleep        4s
+
+
+
+Test List pageZN
+    [Arguments]	 ${mainmenu}	${submenu}    ${link}	${text}
+    Mouse Over    partial link = ${mainmenu}
+    Click Element    link = ${submenu}
+    Sleep	3s
+    Page Should Contain    ${text}
+    Click Element   xpath=//div[@class='box-header with-border']/span/input
+    Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
+    Sleep	2s
+    Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
+    Sleep	2s
+    Click Element    xpath=//span[contains(text(),"Unknown")]
+    Sleep	5s
+    Click Element    link = Client Sessions
+    Sleep      3s
+    Click Element    link = Network
+    Sleep      3s
+    Click Element    link = Thresholds
+    Sleep      3s
+    Click Element    link = Events
+    Sleep      3s
+    Click Element    link = Alarms
+    Sleep      3s
+    Click Element    link = Access Points
+    Sleep      3s
+    Click Element    xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
+    Sleep      2s
+
+    Click Element    xpath=//span[contains(text(),"Home")]
+    Sleep	5s
+    Click Element    link = Client Sessions
+    Sleep      3s
+    Click Element    link = Network
+    Sleep      3s
+    Click Element    link = Thresholds
+    Sleep      3s
+    Click Element    link = Events
+    Sleep      3s
+    Click Element    link = Alarms
+    Sleep      3s
+    Click Element    link = Access Points
+    Sleep      3s
+    Click Element    xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
+    Sleep      2s
+
+    Click Element    xpath=//span[contains(text(),"Rob")]
+    Sleep	5s
+    Click Element    link = Client Sessions
+    Sleep      3s
+    Click Element    link = Network
+    Sleep      3s
+    Click Element    link = Thresholds
+    Sleep      3s
+    Click Element    link = Events
+    Sleep      3s
+    Click Element    link = Alarms
+    Sleep      3s
+    Click Element    link = Access Points
+    Sleep      3s
+    Click Element    xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
+    Sleep      2s
+
+    Click Element    xpath=//span[contains(text(),"SZ3.4 Zone1")]
+    Sleep	5s
+    Click Element    link = Client Sessions
+    Sleep      3s
+    Click Element    link = Network
+    Sleep      3s
+    Click Element    link = Thresholds
+    Sleep      3s
+    Click Element    link = Events
+    Sleep      3s
+    Click Element    link = Alarms
+    Sleep      3s
+    Click Element    link = Access Points
+    Sleep      3s
 
 
 Test List paging
@@ -278,6 +498,14 @@ Test List paging
     Sleep        4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
     Sleep        2s
+
+    Click Element     xpath=//table[@class="table table-bordered ng-scope"]/tbody/tr[3]/td[2]/a/span
+    Sleep        2s
+    Click Element     xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
+    Sleep        2s
+
+    Click Element     xpath=//table[@class="table table-bordered ng-scope"]/tbody/tr[4]/td[2]/a/span
+    Sleep        4s
 
 
 Test List access
