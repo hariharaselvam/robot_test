@@ -21,15 +21,15 @@ TestLogin
     Click Login
 
 Test Dashboard
-    Title Should Be    Dashboard | Ruckus WMS
-    Page Should Contain    Dashboard
-    Page Should Contain    Throughput
-    Page Should Contain    Client Sessions
-    Page Should Contain    Geo Distribution of Controllers
-    Page Should Contain    Controllers by Country
-    Page Should Contain    Access Points
-    Page Should Contain    Controllers
-    Page Should Contain    Events
+    Title Should Be     Dashboard | Ruckus WMS
+    Page Should Contain     Dashboard
+    Page Should Contain     Throughput
+    Page Should Contain     Client Sessions
+    Page Should Contain     Geo Distribution of Controllers
+    Page Should Contain     Controllers by Country
+    Page Should Contain     Access Points
+    Page Should Contain     Controllers
+    Page Should Contain     Events
     Click home button
 
 Test Admin page
@@ -47,10 +47,10 @@ Test Manage pages
     Test List pageDB	Manage	  Dashboards  	   manage	  Dashboards
     Test List pageCLS	Manage	  Clusters	 clusters	 Clusters
     Test List pageZN	Manage	  Zones	           zone	          Zones
-    Test List paging	Manage	 Controllers	     controller	  Controllers
-    Test List access	Manage	 Access Points	    accesspoints	  Access Points
-    Test List page	    Manage	 Client Devices	    uedevices      Client Devices
-    Test List client	Manage	 Client Sessions    uesessions	  Client Sessions
+    Test List paging	Manage	  Controllers	     controller	  Controllers
+    Test List access	Manage	  Access Points	    accesspoints	  Access Points
+    Test List page	    Manage	  Client Devices	    uedevices      Client Devices
+    Test List client	Manage	  Client Sessions    uesessions	  Client Sessions
 
 Test Report pages
 
@@ -217,7 +217,7 @@ Test Datamanagement page
     Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
-    Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
+    Click Element    xpath=//div[@class='box-header with-border']/span/div/button[1]
     Sleep	2s
     Click Button   Today
     Sleep        4s
@@ -289,10 +289,10 @@ Test List pageDB
     Sleep	2s
     Click Element    xpath=//span[contains(text(),"Controller Graphs")]
     Sleep	5s
-    Page Should Contain      Dashboard Information
-    Page Should Contain      Controllers State
-    Page Should Contain      Controller State
-    Page Should Contain      anomaly
+    Page Should Contain       Dashboard Information
+    Page Should Contain       Controllers State
+    Page Should Contain       Controller State
+    Page Should Contain       anomaly
     Click Element    xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
     Sleep       2s
     Click Element    xpath=//span[contains(text(),"list pages")]
