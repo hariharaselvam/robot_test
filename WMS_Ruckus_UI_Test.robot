@@ -22,21 +22,21 @@ TestLogin
 
 Test Dashboard
     Title Should Be     Dashboard | Ruckus WMS
-    Page Should Contain     Dashboard
-    Page Should Contain     Throughput
-    Page Should Contain     Client Sessions
-    Page Should Contain     Geo Distribution of Controllers
-    Page Should Contain     Controllers by Country
-    Page Should Contain     Access Points
-    Page Should Contain     Controllers
-    Page Should Contain     Events
+    Page Should Contain      Dashboard
+    Page Should Contain      Throughput
+    Page Should Contain      Client Sessions
+    Page Should Contain      Geo Distribution of Controllers
+    Page Should Contain      Controllers by Country
+    Page Should Contain      Access Points
+    Page Should Contain      Controllers
+    Page Should Contain      Events
     Click home button
 
 Test Admin page
 
    Test Users page		 Administration	     Users      Accounts
    Test List pages		 Administration	    Tenants    tenants    Tenants
-   Test List page		 Administration	   Controller Authorization	  controllerauthorization	Controller Authorization
+   Test List page		 Administration	    Controller Authorization	controllerauthorization	 Controller Authorization
    Test Datamanagement page      Administration    Data Management   Agent Management
    Test wmscluster page   	 Administration    WMS Cluster       Node Management
    Test List page		 Administration	   Smartzone Releases      releases	  Smartzone Releases
@@ -45,17 +45,17 @@ Test Admin page
 Test Manage pages
 
     Test List pageDB	Manage	  Dashboards  	   manage	  Dashboards
-    Test List pageCLS	Manage	  Clusters	 clusters	 Clusters
+    Test List pageCLS	Manage	  Clusters	  clusters	  Clusters
     Test List pageZN	Manage	  Zones	           zone	          Zones
     Test List paging	Manage	  Controllers	     controller	  Controllers
-    Test List access	Manage	  Access Points	    accesspoints	  Access Points
+    Test List access	Manage	  Access Points	     accesspoints	  Access Points
     Test List page	    Manage	  Client Devices	    uedevices      Client Devices
-    Test List client	Manage	  Client Sessions    uesessions	  Client Sessions
+    Test List client	Manage	  Client Sessions    uesessions	   Client Sessions
 
 Test Report pages
 
-    Test List page	        Reporting      Alarms	 alarms	   Alarms
-    Test List eventgraph    Reporting    Events	  events   Events
+    Test List page	        Reporting      Alarms	 alarms	    Alarms
+    Test List eventgraph    Reporting      Events	 events     Events
 
 
 Test Global pages
@@ -116,6 +116,8 @@ Click home button
     Sleep        4s
     Click Button   Week
     Sleep        4s
+    Click Button   Month
+    Sleep        5s
     Select From List    xpath=//select[@ng-model='graphtype']   Trend
     Sleep        4s
     Select From List    xpath=//select[@ng-model='graphtype']    Anomalies
@@ -223,6 +225,8 @@ Test Datamanagement page
     Sleep        4s
     Click Button   Week
     Sleep        4s
+    Click Button   Month
+    Sleep        5s
     Select From List    xpath=//select[@ng-model='chart_type']    content
     Sleep        4s
     Select From List    xpath=//select[@ng-model='chart_type']    time
@@ -484,6 +488,8 @@ Test List paging
     Sleep        4s
     Click Button   Week
     Sleep        4s
+    Click Button   Month
+    Sleep        5s
     Select From List    xpath=//select[@ng-model='chart_type']    state
     Sleep        4s
     Select From List    xpath=//select[@ng-model='chart_type']    model
@@ -500,11 +506,71 @@ Test List paging
     Sleep        2s
 
     Click Element     xpath=//table[@class="table table-bordered ng-scope"]/tbody/tr[3]/td[2]/a/span
-    Sleep        2s
+    Sleep        6s
+    Click Element    xpath=//wms-tabs/ul/li[2]/a
+    Sleep      3s
+    Click Element    xpath=//wms-tabs/ul/li[3]/a
+    Sleep      3s
+    Click Element    link = Disk
+    Sleep      3s
+    Click Element    link = Patches
+    Sleep      3s
+    Click Element    link = Events
+    Sleep      3s
+    Click Element    link = Network
+    Sleep      3s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = License
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Access Points
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Thresholds
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Memory
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Alarms
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = CPU
+    Sleep        4s
     Click Element     xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
     Sleep        2s
 
     Click Element     xpath=//table[@class="table table-bordered ng-scope"]/tbody/tr[4]/td[2]/a/span
+    Sleep        6s
+    Click Element    xpath=//wms-tabs/ul/li[2]/a
+    Sleep      3s
+    Click Element    xpath=//wms-tabs/ul/li[3]/a
+    Sleep      3s
+    Click Element    link = Disk
+    Sleep      3s
+    Click Element    link = Patches
+    Sleep      3s
+    Click Element    link = Events
+    Sleep      3s
+    Click Element    link = Network
+    Sleep      3s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = License
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Access Points
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Thresholds
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Memory
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = Alarms
+    Sleep        4s
+    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Click Element    link = CPU
     Sleep        4s
 
 
@@ -523,6 +589,8 @@ Test List access
     Sleep        4s
     Click Button   Week
     Sleep        4s
+    Click Button   Month
+    Sleep        5s
     Select From List    xpath=//select[@ng-model='chart_type']    state
     Sleep        4s
     Select From List    xpath=//select[@ng-model='chart_type']    model
@@ -554,6 +622,8 @@ Test List client
     Sleep        4s
     Click Button   Week
     Sleep        4s
+    Click Button   Month
+    Sleep        5s
     Select From List    xpath=//select[@ng-model='cls_type']    session
     Sleep        4s
     Select From List    xpath=//select[@ng-model='cls_type']    network
@@ -589,10 +659,12 @@ Test List eventgraph
     Sleep        4s
     Click Button   Week
     Sleep        4s
+    Click Button   Month
+    Sleep        8s
     Click Element   xpath=//*[@class='box-tools pull-right']/a/button
     Sleep        4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
-    Sleep        2s
+    Sleep        3s
     Click Element   xpath=//*[@id='temp']/div/section[2]/div/div[2]/div/wms-charts/div[1]/div/a/button
     Sleep        4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
