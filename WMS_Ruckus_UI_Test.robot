@@ -22,21 +22,21 @@ TestLogin
 
 Test Dashboard
     Title Should Be     Dashboard | Ruckus WMS
-    Page Should Contain      Dashboard
-    Page Should Contain      Throughput
-    Page Should Contain      Client Sessions
-    Page Should Contain      Geo Distribution of Controllers
-    Page Should Contain      Controllers by Country
-    Page Should Contain      Access Points
-    Page Should Contain      Controllers
-    Page Should Contain      Events
+    Page Should Contain       Dashboard
+    Page Should Contain       Throughput
+    Page Should Contain       Client Sessions
+    Page Should Contain       Geo Distribution of Controllers
+    Page Should Contain       Controllers by Country
+    Page Should Contain       Access Points
+    Page Should Contain       Controllers
+    Page Should Contain       Events
     Click home button
 
 Test Admin page
 
    Test Users page		 Administration	     Users      Accounts
    Test List pages		 Administration	    Tenants    tenants    Tenants
-   Test List page		 Administration	    Controller Authorization	controllerauthorization	 Controller Authorization
+   Test List page		 Administration	    Controller Authorization	controllerauthorization	  Controller Authorization
    Test Datamanagement page      Administration    Data Management   Agent Management
    Test wmscluster page   	 Administration    WMS Cluster       Node Management
    Test List page		 Administration	   Smartzone Releases      releases	  Smartzone Releases
@@ -44,10 +44,10 @@ Test Admin page
 
 Test Manage pages
 
-    Test List pageDB	Manage	  Dashboards  	   manage	  Dashboards
-    Test List pageCLS	Manage	  Clusters	  clusters	  Clusters
+    Test List pageDB	Manage	  Dashboards  	   manage	   Dashboards
+    Test List pageCLS	Manage	  Clusters	       clusters	   Clusters
     Test List pageZN	Manage	  Zones	           zone	          Zones
-    Test List paging	Manage	  Controllers	     controller	  Controllers
+    Test List paging	Manage	  Controllers	     controller	   Controllers
     Test List access	Manage	  Access Points	     accesspoints	  Access Points
     Test List page	    Manage	  Client Devices	    uedevices      Client Devices
     Test List client	Manage	  Client Sessions    uesessions	   Client Sessions
@@ -131,7 +131,6 @@ Test Users page
     Click Element   xpath=//*[@ui-sref='accounts']
     Sleep	2s
     Page Should Contain    ${item}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -162,7 +161,6 @@ Test Users page
     Mouse Over    partial link = ${text}
     Click Element    xpath=//*[@ui-sref='groups']
     Sleep	2s
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -193,7 +191,6 @@ Test List page
     Click Element    link = ${submenu}
     Sleep	3s
     Page Should Contain    ${text}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -207,7 +204,6 @@ Test Datamanagement page
     Click Element   xpath=//*[@ui-sref='agents']
     Sleep	2s
     Page Should Contain    ${item}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -216,7 +212,6 @@ Test Datamanagement page
     Mouse Over    partial link = ${text}
     Click Element   xpath=//*[@ui-sref='datalake']
     Sleep	2s
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element    xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -248,7 +243,6 @@ Test Wmscluster page
     Click Element   xpath=//*[@ui-sref='nodes']
     Sleep	2s
     Page Should Contain    ${item}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -273,7 +267,6 @@ Test Wmscluster page
     Mouse Over    partial link = ${text}
     Click Element   xpath=//*[@ui-sref='settings']
     Sleep	2s
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -286,7 +279,6 @@ Test List pageDB
     Click Element    link = ${submenu}
     Sleep	3s
     Page Should Contain    ${text}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -318,7 +310,6 @@ Test List pageCLS
     Click Element    link = ${submenu}
     Sleep	3s
     Page Should Contain    ${text}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -401,7 +392,6 @@ Test List pageZN
     Click Element    link = ${submenu}
     Sleep	3s
     Page Should Contain    ${text}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -479,7 +469,6 @@ Test List paging
     Click Element    link = ${submenu}
     Sleep	3s
     Page Should Contain    ${text}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -580,7 +569,6 @@ Test List access
     Click Element    link = ${submenu}
     Sleep	3s
     Page Should Contain    ${text}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -613,7 +601,6 @@ Test List client
     Click Element    link = ${submenu}
     Sleep	3s
     Page Should Contain    ${text}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -650,7 +637,6 @@ Test List eventgraph
     Click Element    link = ${submenu}
     Sleep	3s
     Page Should Contain    ${text}
-    Click Element   xpath=//div[@class='box-header with-border']/span/input
     Input Text    xpath=//div[@class='box-header with-border']/span/input      ${Searchval}
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
@@ -660,20 +646,20 @@ Test List eventgraph
     Click Button   Week
     Sleep        4s
     Click Button   Month
-    Sleep        8s
+    Sleep        6s
     Click Element   xpath=//*[@class='box-tools pull-right']/a/button
-    Sleep        4s
+    Sleep        5s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
-    Sleep        3s
+    Sleep        4s
     Click Element   xpath=//*[@id='temp']/div/section[2]/div/div[2]/div/wms-charts/div[1]/div/a/button
     Sleep        4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
-    Sleep        2s
+    Sleep        3s
 
 
 
 Click search button
-    Click Element   xpath=//div[@class='form-group has-feedback']/input
+
     Input Text    xpath=//div[@class='form-group has-feedback']/input        ${searchtext}
     Sleep        2s
     Press Key     xpath=//div[@class='form-group has-feedback']/input    \\13
