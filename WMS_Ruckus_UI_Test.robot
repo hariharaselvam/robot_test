@@ -72,9 +72,6 @@ Logout From WMS
     [Teardown]    Close Browser
 
 
-
-
-
 *** Keywords ***
 
 Open Browser to the Login Page
@@ -157,6 +154,7 @@ Test Users page
     Sleep	2s
     Click Element    xpath=//span[contains(text(),"Testing")]
     Sleep	5s
+
     Mouse Over    partial link = ${mainmenu}
     Mouse Over    partial link = ${text}
     Click Element    xpath=//*[@ui-sref='groups']
@@ -302,8 +300,6 @@ Test List pageDB
     Click Element    xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
     Sleep       2s
 
-
-
 Test List pageCLS
     [Arguments]	 ${mainmenu}   ${submenu}    ${link}	${text}
     Mouse Over    partial link = ${mainmenu}
@@ -314,11 +310,10 @@ Test List pageCLS
     Sleep	2s
     Click Element   xpath=//div[@class='box-header with-border']/span/div/button[1]
     Sleep	2s
+
     Click Element    xpath=//table/tbody/tr[3]/td[2]/a/span/span
     Sleep	5s
     Page Should Contain      Cluster Information
-    Page Should Contain      Timeline
-    Page Should Contain      Distribution
     Click Element    link = Thresholds
     Sleep      3s
     Click Element    link = Network
@@ -331,12 +326,49 @@ Test List pageCLS
     Sleep      3s
     Click Element    link = Data Management
     Sleep      3s
-    Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
+    Mouse Over        xpath=//a[@class="dropdown-toggle ng-binding"]
     Click Element    link = Events
     Sleep        4s
     Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
     Click Element    link = Client Sessions
     Sleep        4s
+
+    Click Element     xpath=//a[@class="lightview text-muted"]
+    Sleep        3s
+    Click Element   xpath=//*[@id='controller']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='controller']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='zone']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='zone']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoint']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoint']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='datalake']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='datalake']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clevents']/i
+    Sleep        2s
+    Click Element     xpath=//div[@class="lv_button_top_close close_lightview lv_button_top_close_controls_type_relative"]
+    Sleep        2s
     Click Element     xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
     Sleep        2s
 
@@ -360,6 +392,43 @@ Test List pageCLS
     Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
     Click Element    link = Client Sessions
     Sleep        4s
+
+    Click Element     xpath=//a[@class="lightview text-muted"]
+    Sleep        3s
+    Click Element   xpath=//*[@id='controller']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='controller']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='zone']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='zone']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoint']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoint']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='datalake']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='datalake']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clevents']/i
+    Sleep        2s
+    Click Element     xpath=//div[@class="lv_button_top_close close_lightview lv_button_top_close_controls_type_relative"]
+    Sleep        2s
     Click Element     xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
     Sleep        2s
 
@@ -383,6 +452,43 @@ Test List pageCLS
     Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
     Click Element    link = Client Sessions
     Sleep        4s
+
+    Click Element     xpath=//a[@class="lightview text-muted"]
+    Sleep        3s
+    Click Element   xpath=//*[@id='controller']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='controller']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='zone']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='zone']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoint']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoint']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='datalake']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='datalake']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clevents']/i
+    Sleep        2s
+    Click Element     xpath=//div[@class="lv_button_top_close close_lightview lv_button_top_close_controls_type_relative"]
+    Sleep        2s
 
 
 
@@ -410,6 +516,35 @@ Test List pageZN
     Sleep      3s
     Click Element    link = Access Points
     Sleep      3s
+
+    Click Element     xpath=//a[@class="lightview text-muted"]
+    Sleep        3s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='znevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='znevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoints']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoints']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element     xpath=//div[@class="lv_button_top_close close_lightview lv_button_top_close_controls_type_relative"]
+    Sleep        2s
     Click Element    xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
     Sleep      2s
 
@@ -427,6 +562,35 @@ Test List pageZN
     Sleep      3s
     Click Element    link = Access Points
     Sleep      3s
+
+    Click Element     xpath=//a[@class="lightview text-muted"]
+    Sleep        3s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='znevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='znevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoints']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoints']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element     xpath=//div[@class="lv_button_top_close close_lightview lv_button_top_close_controls_type_relative"]
+    Sleep        2s
     Click Element    xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
     Sleep      2s
 
@@ -444,6 +608,35 @@ Test List pageZN
     Sleep      3s
     Click Element    link = Access Points
     Sleep      3s
+
+    Click Element     xpath=//a[@class="lightview text-muted"]
+    Sleep        3s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='znevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='znevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoints']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoints']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element     xpath=//div[@class="lv_button_top_close close_lightview lv_button_top_close_controls_type_relative"]
+    Sleep        2s
     Click Element    xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
     Sleep      2s
 
@@ -461,6 +654,35 @@ Test List pageZN
     Sleep      3s
     Click Element    link = Access Points
     Sleep      3s
+
+    Click Element     xpath=//a[@class="lightview text-muted"]
+    Sleep        3s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='znevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='znevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoints']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoints']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element     xpath=//div[@class="lv_button_top_close close_lightview lv_button_top_close_controls_type_relative"]
+    Sleep        2s
 
 
 Test List paging
@@ -526,6 +748,63 @@ Test List paging
     Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
     Click Element    link = CPU
     Sleep        4s
+
+    Click Element     xpath=//a[@class="lightview text-muted"]
+    Sleep        3s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='datalake']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='datalake']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='agents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='agents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='disk']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='disk']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='patches']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='patches']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='cnevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='cnevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='license']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='license']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoint']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoint']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='memory']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='memory']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='cpu']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='cpu']/i
+    Sleep        2s
+    Click Element     xpath=//div[@class="lv_button_top_close close_lightview lv_button_top_close_controls_type_relative"]
+    Sleep        2s
     Click Element     xpath=//*[@id='temp']/div/section[1]/ol/li[2]/a
     Sleep        2s
 
@@ -561,6 +840,63 @@ Test List paging
     Mouse Over       xpath=//a[@class="dropdown-toggle ng-binding"]
     Click Element    link = CPU
     Sleep        4s
+
+    Click Element     xpath=//a[@class="lightview text-muted"]
+    Sleep        3s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='clients']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='datalake']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='datalake']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='agents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='agents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='disk']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='disk']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='patches']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='patches']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='cnevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='cnevents']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='network']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='license']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='license']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoint']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='accesspoint']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alerts']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='memory']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='memory']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='alarms']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='cpu']/i
+    Sleep        2s
+    Click Element   xpath=//*[@id='cpu']/i
+    Sleep        2s
+    Click Element     xpath=//div[@class="lv_button_top_close close_lightview lv_button_top_close_controls_type_relative"]
+    Sleep        2s
 
 
 Test List access
