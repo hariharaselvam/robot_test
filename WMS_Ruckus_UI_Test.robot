@@ -990,7 +990,7 @@ Test List eventgraph
     Click Element   xpath=//*[@id='temp']/div/section[2]/div/div[2]/div/wms-charts/div[1]/div/a/button
     Sleep        4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
-    Sleep        3s
+    Sleep        2s
 
 
 
