@@ -980,9 +980,8 @@ Test List eventgraph
     Click Button   Today
     Sleep        4s
     Click Button   Week
-    Sleep        4s
-    Click Button   Month
-    Sleep        6s
+    Sleep        5s
+
     Click Element   xpath=//*[@class='box-tools pull-right']/a/button
     Sleep        5s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
