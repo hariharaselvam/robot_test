@@ -38,14 +38,13 @@ Test Admin page
    Test List pages		 Administration	    Tenants    tenants    Tenants
    Test List page		 Administration	    Controller Authorization	controllerauthorization	  Controller Authorization
    Test Datamanagement page      Administration    Data Management   Agent Management
-   Test wmscluster page   	 Administration    WMS Cluster       Node Management
-   Test List page		 Administration	   Smartzone Releases      releases	  Smartzone Releases
+   Test wmscluster page   	 Administration     WMS Cluster       Node Management
 
 
 Test Manage pages
 
-    Test List pageDB	Manage	  Dashboards  	   manage	   Dashboards
-    Test List pageCLS	Manage	  Clusters	       clusters	   Clusters
+    Test List pageDB	Manage	   Dashboards  	    manage	    Dashboards
+    Test List pageCLS	Manage	   Clusters	       clusters	   Clusters
     Test List pageZN	Manage	  Zones	           zone	          Zones
     Test List paging	Manage	  Controllers	     controller	   Controllers
     Test List access	Manage	  Access Points	     accesspoints	  Access Points
