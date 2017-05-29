@@ -21,7 +21,7 @@ TestLogin
     Click Login
 
 Test Dashboard
-    Title Should Be     Dashboard | Ruckus WMS
+    Title Should Be       Dashboard | Ruckus WMS
     Page Should Contain       Dashboard
     Page Should Contain       Throughput
     Page Should Contain       Client Sessions
