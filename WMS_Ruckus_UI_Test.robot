@@ -43,7 +43,7 @@ Test Admin page
 
 Test Manage pages
 
-    Test List pageDB	Manage	   Dashboards  	    manage	    Dashboards
+    Test List page  	Manage	   Dashboards  	    manage	    Dashboards
     Test List pageCLS	Manage	   Clusters	       clusters	   Clusters
     Test List pageZN	Manage	  Zones	           zone	          Zones
     Test List paging	Manage	  Controllers	     controller	   Controllers
