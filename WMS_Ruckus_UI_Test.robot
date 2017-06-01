@@ -23,7 +23,7 @@ TestLogin
 Test Dashboard
     Title Should Be       Dashboard | Ruckus WMS
     Page Should Contain       Dashboard
-    Page Should Contain       Throughput
+    Page Should Contain        Throughput
     Page Should Contain       Client Sessions
     Page Should Contain       Geo Distribution of Controllers
     Page Should Contain       Controllers by Country
@@ -45,7 +45,7 @@ Test Manage pages
 
     Test List page  	Manage	   Dashboards  	    manage	    Dashboards
     Test List pageCLS	Manage	   Clusters	       clusters	   Clusters
-    Test List pageZN	Manage	  Zones	           zone	          Zones
+    Test List page  	Manage  	  Zones	           zone	          Zones
     Test List paging	Manage	  Controllers	     controller	   Controllers
     Test List access	Manage	  Access Points	     accesspoints	  Access Points
     Test List page	    Manage	  Client Devices	    uedevices      Client Devices
