@@ -9,7 +9,7 @@ Library           Selenium2Library
 
 *** Variables ***
 
-${Browser}        Firefox
+${Browser}        Chrome
 ${searchtext}     ryan
 
 *** Test Cases ***
@@ -23,7 +23,7 @@ TestLogin
 Test Dashboard
     Title Should Be       Dashboard | Ruckus WMS
     Page Should Contain       Dashboard
-    Page Should Contain        Throughput
+    Page Should Contain       Throughput
     Page Should Contain       Client Sessions
     Page Should Contain       Geo Distribution of Controllers
     Page Should Contain       Controllers by Country
