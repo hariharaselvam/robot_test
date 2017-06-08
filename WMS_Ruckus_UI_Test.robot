@@ -9,7 +9,7 @@ Library           Selenium2Library
 
 *** Variables ***
 
-${Browser}        Chrome
+${Browser}        firefox
 ${searchtext}     ryan
 
 *** Test Cases ***
