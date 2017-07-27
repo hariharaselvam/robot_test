@@ -88,23 +88,23 @@ Click Login
 
 
 Click home button
-    Click Element   xpath=//div[@id='tpgraph']/div/wms-charts/div[1]/div/a/button
+    Click Element   xpath=//div[@id='tpgraph']/div/wms-graphs/div[1]/div/a/button
     Sleep      4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
     Sleep     2s
-    Click Element   xpath=//div[@id='csgraph']/div/wms-charts/div[1]/div/a/button
+    Click Element   xpath=//div[@id='csgraph']/div/wms-graphs/div[1]/div/a/button
     Sleep      4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
     Sleep     2s
-    Click Element   xpath=//div[@id='worldpie']/div/wms-charts/div[1]/div/a/button
+    Click Element   xpath=//div[@id='worldpie']/div/wms-graphs/div[1]/div/a/button
     Sleep      4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
     Sleep     2s
-    Click Element   xpath=//div[@id='osgraph']/div/wms-charts/div[1]/div/a/button
+    Click Element   xpath=//div[@id='osgraph']/div/wms-graphs/div[1]/div/a/button
     Sleep      4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
     Sleep     2s
-    Click Element   xpath=//div[@id='apgraph']/div/wms-charts/div[1]/div/a/button
+    Click Element   xpath=//div[@id='apgraph']/div/wms-graphs/div[1]/div/a/button
     Sleep      4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
     Sleep     2s
@@ -227,7 +227,7 @@ Test Datamanagement page
     Sleep        4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
     Sleep        2s
-    Click Element   xpath=//*[@id='temp']/div/section[2]/div[2]/div[2]/div/wms-charts/div[1]/div/a/button
+    Click Element   xpath=//*[@id='temp']/div/section[2]/div[2]/div[2]/div/wms-graphs/div[1]/div/a/button
     Sleep        4s
     Click Element   xpath=//div[@class='lv_button_top_close close_lightview lv_button_top_close_controls_type_relative']
     Sleep        3s
