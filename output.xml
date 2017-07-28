@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170727 17:12:41.645" generator="Robot 3.0.2 (Python 2.7.6 on linux2)">
-<suite source="/home/asm/PycharmProjects/wms_test/UI_Test_ServiceDiscovery.robot" id="s1" name="UI Test ServiceDiscovery">
+<robot generated="20170728 11:17:03.042" generator="Robot 3.0.2 (Python 2.7.6 on linux2)">
+<suite source="/home/asm/PycharmProjects/wms_test/Ui_test_PHRegistry.robot" id="s1" name="Ui test PHRegistry">
 <test id="s1-t1" name="TestLogin">
 <kw name="Open Browser to the Login Page">
 <kw name="Open Browser" library="Selenium2Library">
@@ -9,14 +9,14 @@
 <arg>${SiteUrl}</arg>
 <arg>${Browser}</arg>
 </arguments>
-<msg timestamp="20170727 17:12:41.744" level="INFO">Opening browser 'Firefox' to base url 'https://wms-sd.ph-rw.net'</msg>
-<status status="PASS" endtime="20170727 17:12:51.642" starttime="20170727 17:12:41.744"></status>
+<msg timestamp="20170728 11:17:03.132" level="INFO">Opening browser 'Firefox' to base url 'https://phrssht.ph-rw.net'</msg>
+<status status="PASS" endtime="20170728 11:17:16.635" starttime="20170728 11:17:03.132"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170727 17:12:51.651" starttime="20170727 17:12:51.642"></status>
+<status status="PASS" endtime="20170728 11:17:16.645" starttime="20170728 11:17:16.635"></status>
 </kw>
-<status status="PASS" endtime="20170727 17:12:51.652" starttime="20170727 17:12:41.743"></status>
+<status status="PASS" endtime="20170728 11:17:16.646" starttime="20170728 11:17:03.131"></status>
 </kw>
 <kw name="Enter User Name">
 <kw name="Input Text" library="Selenium2Library">
@@ -25,10 +25,10 @@
 <arg>username</arg>
 <arg>${Username}</arg>
 </arguments>
-<msg timestamp="20170727 17:12:51.654" level="INFO">Typing text 'hariharaselvam' into text field 'username'</msg>
-<status status="PASS" endtime="20170727 17:12:51.817" starttime="20170727 17:12:51.653"></status>
+<msg timestamp="20170728 11:17:16.648" level="INFO">Typing text 'admin' into text field 'username'</msg>
+<status status="PASS" endtime="20170728 11:17:16.806" starttime="20170728 11:17:16.647"></status>
 </kw>
-<status status="PASS" endtime="20170727 17:12:51.817" starttime="20170727 17:12:51.652"></status>
+<status status="PASS" endtime="20170728 11:17:16.807" starttime="20170728 11:17:16.646"></status>
 </kw>
 <kw name="Enter Password">
 <kw name="Input Text" library="Selenium2Library">
@@ -37,10 +37,10 @@
 <arg>password</arg>
 <arg>${Password}</arg>
 </arguments>
-<msg timestamp="20170727 17:12:51.819" level="INFO">Typing text 'testing123' into text field 'password'</msg>
-<status status="PASS" endtime="20170727 17:12:51.897" starttime="20170727 17:12:51.818"></status>
+<msg timestamp="20170728 11:17:16.809" level="INFO">Typing text 'testing123!' into text field 'password'</msg>
+<status status="PASS" endtime="20170728 11:17:16.899" starttime="20170728 11:17:16.809"></status>
 </kw>
-<status status="PASS" endtime="20170727 17:12:51.897" starttime="20170727 17:12:51.818"></status>
+<status status="PASS" endtime="20170728 11:17:16.900" starttime="20170728 11:17:16.808"></status>
 </kw>
 <kw name="Click Login">
 <kw name="Click Button" library="Selenium2Library">
@@ -48,83 +48,138 @@
 <arguments>
 <arg>Sign In</arg>
 </arguments>
-<msg timestamp="20170727 17:12:51.898" level="INFO">Clicking button 'Sign In'.</msg>
-<status status="PASS" endtime="20170727 17:12:55.689" starttime="20170727 17:12:51.898"></status>
+<msg timestamp="20170728 11:17:16.901" level="INFO">Clicking button 'Sign In'.</msg>
+<status status="PASS" endtime="20170728 11:17:25.003" starttime="20170728 11:17:16.900"></status>
 </kw>
-<status status="PASS" endtime="20170727 17:12:55.689" starttime="20170727 17:12:51.898"></status>
+<status status="PASS" endtime="20170728 11:17:25.004" starttime="20170728 11:17:16.900"></status>
 </kw>
-<status status="PASS" endtime="20170727 17:12:55.689" critical="yes" starttime="20170727 17:12:41.743"></status>
+<status status="PASS" endtime="20170728 11:17:25.004" critical="yes" starttime="20170728 11:17:03.131"></status>
 </test>
 <test id="s1-t2" name="Test Dashboard">
 <kw name="Title Should Be" library="Selenium2Library">
 <doc>Verifies that current page title equals `title`.</doc>
 <arguments>
-<arg>Dashboard | WMS Discovery | Ruckus | Brocade</arg>
+<arg>Dashboard | Ruckus PhoneHome</arg>
 </arguments>
-<msg timestamp="20170727 17:12:55.702" level="INFO">Page title is 'Dashboard | WMS Discovery | Ruckus | Brocade'.</msg>
-<status status="PASS" endtime="20170727 17:12:55.703" starttime="20170727 17:12:55.692"></status>
+<msg timestamp="20170728 11:17:25.020" level="INFO">Page title is 'Dashboard | Ruckus PhoneHome'.</msg>
+<status status="PASS" endtime="20170728 11:17:25.020" starttime="20170728 11:17:25.005"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
-<arg>Service Discovery</arg>
+<arg>Dashboard</arg>
 </arguments>
-<msg timestamp="20170727 17:12:55.788" level="INFO">Current page contains text 'Service Discovery'.</msg>
-<status status="PASS" endtime="20170727 17:12:55.788" starttime="20170727 17:12:55.703"></status>
+<msg timestamp="20170728 11:17:25.205" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" endtime="20170728 11:17:25.205" starttime="20170728 11:17:25.020"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>4s</arg>
 </arguments>
-<msg timestamp="20170727 17:12:59.790" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" endtime="20170727 17:12:59.790" starttime="20170727 17:12:55.789"></status>
+<msg timestamp="20170728 11:17:29.207" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20170728 11:17:29.207" starttime="20170728 11:17:25.206"></status>
 </kw>
 <kw name="Search Page">
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//div[@class="box box-warning"]/wms-tables/div[1]/span/input</arg>
+<arg>xpath=//div[@class="box box-warning"]/ph-tables/div[1]/span/input</arg>
 </arguments>
-<msg timestamp="20170727 17:12:59.791" level="INFO">Clicking element 'xpath=//div[@class="box box-warning"]/wms-tables/div[1]/span/input'.</msg>
-<status status="PASS" endtime="20170727 17:12:59.946" starttime="20170727 17:12:59.791"></status>
+<msg timestamp="20170728 11:17:29.208" level="INFO">Clicking element 'xpath=//div[@class="box box-warning"]/ph-tables/div[1]/span/input'.</msg>
+<status status="PASS" endtime="20170728 11:17:29.313" starttime="20170728 11:17:29.208"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//div[@class="box box-warning"]/wms-tables/div[1]/span/input</arg>
+<arg>xpath=//div[@class="box box-warning"]/ph-tables/div[1]/span/input</arg>
 <arg>${Searchval}</arg>
 </arguments>
-<msg timestamp="20170727 17:12:59.947" level="INFO">Typing text 'scg' into text field 'xpath=//div[@class="box box-warning"]/wms-tables/div[1]/span/input'</msg>
-<status status="PASS" endtime="20170727 17:13:00.038" starttime="20170727 17:12:59.946"></status>
+<msg timestamp="20170728 11:17:29.314" level="INFO">Typing text 'goss' into text field 'xpath=//div[@class="box box-warning"]/ph-tables/div[1]/span/input'</msg>
+<status status="PASS" endtime="20170728 11:17:29.421" starttime="20170728 11:17:29.314"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20170727 17:13:02.040" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20170727 17:13:02.040" starttime="20170727 17:13:00.039"></status>
+<msg timestamp="20170728 11:17:31.422" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170728 11:17:31.422" starttime="20170728 11:17:29.421"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//div[@class='box-header with-border']/span/div/button[1]</arg>
 </arguments>
-<msg timestamp="20170727 17:13:02.041" level="INFO">Clicking element 'xpath=//div[@class='box-header with-border']/span/div/button[1]'.</msg>
-<status status="PASS" endtime="20170727 17:13:02.174" starttime="20170727 17:13:02.040"></status>
+<msg timestamp="20170728 11:17:31.423" level="INFO">Clicking element 'xpath=//div[@class='box-header with-border']/span/div/button[1]'.</msg>
+<status status="PASS" endtime="20170728 11:17:31.586" starttime="20170728 11:17:31.423"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20170727 17:13:04.175" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20170727 17:13:04.176" starttime="20170727 17:13:02.175"></status>
+<msg timestamp="20170728 11:17:33.587" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170728 11:17:33.588" starttime="20170728 11:17:31.587"></status>
 </kw>
-<status status="PASS" endtime="20170727 17:13:04.176" starttime="20170727 17:12:59.790"></status>
+<status status="PASS" endtime="20170728 11:17:33.588" starttime="20170728 11:17:29.207"></status>
 </kw>
-<status status="PASS" endtime="20170727 17:13:04.177" critical="yes" starttime="20170727 17:12:55.691"></status>
+<kw name="Test Remote page">
+<arguments>
+<arg>Remote Access</arg>
+</arguments>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
+<arguments>
+<arg>partial link = ${mainmenu}</arg>
+</arguments>
+<msg timestamp="20170728 11:17:33.590" level="INFO">Simulating Mouse Over on element 'partial link = Remote Access'</msg>
+<status status="PASS" endtime="20170728 11:17:33.697" starttime="20170728 11:17:33.589"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@ui-sref="remote"]</arg>
+</arguments>
+<msg timestamp="20170728 11:17:33.697" level="INFO">Clicking element 'xpath=//*[@ui-sref="remote"]'.</msg>
+<status status="PASS" endtime="20170728 11:17:33.778" starttime="20170728 11:17:33.697"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170728 11:17:35.779" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170728 11:17:35.779" starttime="20170728 11:17:33.778"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//div[@class="form-group has-feedback"]/input</arg>
+</arguments>
+<msg timestamp="20170728 11:17:35.780" level="INFO">Clicking element 'xpath=//div[@class="form-group has-feedback"]/input'.</msg>
+<status status="PASS" endtime="20170728 11:17:35.866" starttime="20170728 11:17:35.780"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//div[@class="form-group has-feedback"]/input</arg>
+<arg>${Search}</arg>
+</arguments>
+<msg timestamp="20170728 11:17:35.866" level="INFO">Typing text 'ruckus' into text field 'xpath=//div[@class="form-group has-feedback"]/input'</msg>
+<status status="PASS" endtime="20170728 11:17:35.972" starttime="20170728 11:17:35.866"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170728 11:17:37.973" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170728 11:17:37.973" starttime="20170728 11:17:35.972"></status>
+</kw>
+<status status="PASS" endtime="20170728 11:17:37.973" starttime="20170728 11:17:33.588"></status>
+</kw>
+<status status="PASS" endtime="20170728 11:17:37.974" critical="yes" starttime="20170728 11:17:25.005"></status>
 </test>
 <test id="s1-t3" name="Logout From WMS">
 <kw name="Mouse Over" library="Selenium2Library">
@@ -132,59 +187,59 @@
 <arguments>
 <arg>partial link = ${Username}</arg>
 </arguments>
-<msg timestamp="20170727 17:13:04.180" level="INFO">Simulating Mouse Over on element 'partial link = hariharaselvam'</msg>
-<status status="PASS" endtime="20170727 17:13:04.420" starttime="20170727 17:13:04.180"></status>
+<msg timestamp="20170728 11:17:37.977" level="INFO">Simulating Mouse Over on element 'partial link = admin'</msg>
+<status status="PASS" endtime="20170728 11:17:38.077" starttime="20170728 11:17:37.976"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>link = Profile</arg>
 </arguments>
-<msg timestamp="20170727 17:13:04.421" level="INFO">Clicking element 'link = Profile'.</msg>
-<status status="PASS" endtime="20170727 17:13:04.665" starttime="20170727 17:13:04.420"></status>
+<msg timestamp="20170728 11:17:38.078" level="INFO">Clicking element 'link = Profile'.</msg>
+<status status="PASS" endtime="20170728 11:17:38.234" starttime="20170728 11:17:38.078"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>4s</arg>
 </arguments>
-<msg timestamp="20170727 17:13:08.666" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" endtime="20170727 17:13:08.667" starttime="20170727 17:13:04.666"></status>
+<msg timestamp="20170728 11:17:42.235" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20170728 11:17:42.236" starttime="20170728 11:17:38.234"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element specified by `locator`.</doc>
 <arguments>
 <arg>partial link = ${Username}</arg>
 </arguments>
-<msg timestamp="20170727 17:13:08.668" level="INFO">Simulating Mouse Over on element 'partial link = hariharaselvam'</msg>
-<status status="PASS" endtime="20170727 17:13:08.737" starttime="20170727 17:13:08.667"></status>
+<msg timestamp="20170728 11:17:42.237" level="INFO">Simulating Mouse Over on element 'partial link = admin'</msg>
+<status status="PASS" endtime="20170728 11:17:42.323" starttime="20170728 11:17:42.236"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>link = Sign out</arg>
 </arguments>
-<msg timestamp="20170727 17:13:08.738" level="INFO">Clicking element 'link = Sign out'.</msg>
-<status status="PASS" endtime="20170727 17:13:09.244" starttime="20170727 17:13:08.738"></status>
+<msg timestamp="20170728 11:17:42.324" level="INFO">Clicking element 'link = Sign out'.</msg>
+<status status="PASS" endtime="20170728 11:17:42.848" starttime="20170728 11:17:42.324"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>Successfully logged out!</arg>
 </arguments>
-<msg timestamp="20170727 17:13:09.266" level="INFO">Current page contains text 'Successfully logged out!'.</msg>
-<status status="PASS" endtime="20170727 17:13:09.266" starttime="20170727 17:13:09.245"></status>
+<msg timestamp="20170728 11:17:42.867" level="INFO">Current page contains text 'Successfully logged out!'.</msg>
+<status status="PASS" endtime="20170728 11:17:42.867" starttime="20170728 11:17:42.848"></status>
 </kw>
 <kw type="teardown" name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170727 17:13:09.310" starttime="20170727 17:13:09.267"></status>
+<status status="PASS" endtime="20170728 11:17:42.904" starttime="20170728 11:17:42.867"></status>
 </kw>
-<status status="PASS" endtime="20170727 17:13:09.310" critical="yes" starttime="20170727 17:13:04.178"></status>
+<status status="PASS" endtime="20170728 11:17:42.904" critical="yes" starttime="20170728 11:17:37.975"></status>
 </test>
 <doc>Ruckus Wireless Monitoring Server User Interface Test
 
 Python RobotFramework with Selenium 2 Library</doc>
-<status status="PASS" endtime="20170727 17:13:09.312" starttime="20170727 17:12:41.646"></status>
+<status status="PASS" endtime="20170728 11:17:42.906" starttime="20170728 11:17:03.043"></status>
 </suite>
 <statistics>
 <total>
@@ -194,7 +249,7 @@ Python RobotFramework with Selenium 2 Library</doc>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="UI Test ServiceDiscovery" pass="3">UI Test ServiceDiscovery</stat>
+<stat fail="0" id="s1" name="Ui test PHRegistry" pass="3">Ui test PHRegistry</stat>
 </suite>
 </statistics>
 <errors>
